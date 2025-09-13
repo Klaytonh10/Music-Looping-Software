@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Loop 42</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bpm-container">
+
+      <div class="metronome-container">
+        <div>
+          <p class="met-title">Metronome</p>
+        </div>
+
+        <!--add buttons that set bpm to different speeds-->
+        <div class="metronome">
+          <button class="metro-subtract">-</button>
+          <input class="bpm" type="number" readonly/>
+          <button class="metro-add">+</button>
+        </div>
+
+        <div class="met-butt-container">
+          <button class="met-butt">Start</button>
+        </div>
+      </div>
+
+      <div class="bpm-buttons-container">
+        <button class="bpm-butt 1" value="80">80 BPM</button>
+        <button class="bpm-butt 2" value="100">100 BPM</button>
+        <button class="bpm-butt 3" value="140">140 BPM</button>
+        <button class="bpm-butt 4" value="180">180 BPM</button>
+      </div>
+    </div>
+
+    <div class="butts">
+      <button class="start"><p class="butt-text">Rec</p></button>
+      <input type="checkbox" id="sync-box" class="start-met-check"><label for="sync-box">sync with rec</label>
+    </div>
+
+    <div class="playpause">
+      <input type="checkbox" value="None" id="playpause" name="check" />
+      <label for="playpause" tabindex="1"></label>
+    </div>
+
+    <section class="clips"></section>
+
+    <script src="index.js" async defer></script>
+  </body>
+</html>
