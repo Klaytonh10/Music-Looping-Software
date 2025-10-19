@@ -1,53 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Loop 42</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="bpm-container">
 
-      <div class="metronome-container">
-        <div>
-          <p class="met-title">Metronome</p>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Loop 42</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
 
-        <!--add buttons that set bpm to different speeds-->
-        <div class="metronome">
-          <button class="metro-subtract">-</button>
-          <input class="bpm" type="number" readonly/>
-          <button class="metro-add">+</button>
-        </div>
-
-        <div class="met-butt-container">
-          <button class="met-butt">Start</button>
-        </div>
+<body>
+  <div class="bpm-container">
+    <div class="metronome-container">
+      <div>
+        <p class="met-title">Metronome</p>
+      </div>
+      <div class="metronome">
+        <button class="metro-subtract">-</button>
+        <input class="bpm" type="number" readonly />
+        <button class="metro-add">+</button>
       </div>
 
-      <div class="bpm-buttons-container">
-        <button class="bpm-butt 1" value="80">80 BPM</button>
-        <button class="bpm-butt 2" value="100">100 BPM</button>
-        <button class="bpm-butt 3" value="140">140 BPM</button>
-        <button class="bpm-butt 4" value="180">180 BPM</button>
+      <div class="met-butt-container">
+        <button class="met-butt">Start</button>
       </div>
     </div>
-
-    <div class="butts">
-      <button class="start"><p class="butt-text">Rec</p></button>
-      <input type="checkbox" id="sync-box" class="start-met-check"><label for="sync-box">sync with rec</label>
+    <div class="bpm-buttons-container">
+      <button class="bpm-butt 1" value="80">80 BPM</button>
+      <button class="bpm-butt 2" value="100">100 BPM</button>
+      <button class="bpm-butt 3" value="140">140 BPM</button>
+      <button class="bpm-butt 4" value="180">180 BPM</button>
     </div>
+  </div>
 
-    <div class="playpause">
-      <input type="checkbox" value="None" id="playpause" name="check" />
-      <label for="playpause" tabindex="1"></label>
+  <div class="soundpad-container">
+    <div class="col 1">
+      <button class="soundpad 1"></button>
+      <button class="soundpad 2"></button>
+      <button class="soundpad 3"></button>
     </div>
+    <div class="col 2">
+      <button class="soundpad 4"></button>
+      <button class="soundpad 5"></button>
+      <button class="soundpad 6"></button>
+    </div>
+    <div class="col 3">
+      <button class="soundpad 7"></button>
+      <button class="soundpad 8"></button>
+      <button class="soundpad 9"></button>
+    </div>
+  </div>
 
-    <section class="clips"></section>
+  <button class="start">
+    <p class="butt-text">Rec</p>
+  </button>
 
-    <script src="index.js" async defer></script>
-  </body>
+  <div class="check-container">
+    <div>
+      <input type="checkbox" id="sync-box" class="start-met-check" /><label for="sync-box">sync with rec</label>
+    </div>
+    <div>
+      <input type="checkbox" id="count-box" class="count-check" /><label for="count-box">count-in</label>
+    </div>
+  </div>
+
+
+  <div class="download-butt-container">
+    <button class="download">💾</button>
+  </div>
+
+  <div class="playpause">
+    <input type="checkbox" value="None" id="playpause" name="check" />
+    <label for="playpause" tabindex="1"></label>
+  </div>
+
+  <section class="clips"></section>
+
+  <script src="index.js" async defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

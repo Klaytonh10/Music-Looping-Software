@@ -49,7 +49,7 @@ function SetupStream(stream) {
   };
 
   recorder.onstop = (e) => {
-    const blob = new Blob(chunks, { type: "audio/webm; codecs=opus" });
+    const blob = new Blob(chunks, { type: "audio/mp3;" });
     chunks = [];
     const audioUrl = URL.createObjectURL(blob);
     // create new element
@@ -108,7 +108,7 @@ function ToggleMic() {
     start.style.animationIterationCount = "";
     
     if (metIsPlaying) {
-      toggleMetronome()
+      toggleMetronome();
     }
   }
 }
@@ -209,3 +209,10 @@ bpmSelect.forEach((button) => {
     console.log("Button clicked: ", clickedButton.textContent);
   });
 });
+
+// save audio
+
+const downloadButton = document.querySelector(".download");
+downloadButton.addEventListener("click", function () {
+  
+})
